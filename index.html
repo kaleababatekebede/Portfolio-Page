@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kaleab Abate Kebede — Fullstack & AI Developer, and Medical Doctor. I build software with the same care I was trained to give patients."
+    />
+    <meta name="theme-color" content="#0f8b8d" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Kaleab Abate Kebede — Doctor → Developer"
+    />
+    <meta
+      property="og:description"
+      content="Fullstack & AI Developer, and Medical Doctor. I build software with the same care I was trained to give patients."
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <title>Kaleab Abate Kebede — Doctor → Developer</title>
+
+    <!-- Favicon: a small teal "vitals line" monogram, inline so no extra file is needed -->
+    <!-- <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f8b8d'/%3E%3Cpath d='M10 34h9l4-12 6 20 5-14 4 6h16' fill='none' stroke='%23ffffff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    /> -->
+    <link
+      rel="shortcut icon"
+      href="resources/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.15.1/devicon.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <!--
+    Note for future-me: theme defaults to the visitor's OS preference
+    (prefers-color-scheme), then can be flipped with the toggle button.
+    It's session-only by design — no localStorage — so nothing about a
+    visitor's device is remembered between visits.
+  -->
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <!-- ============================= STETHOSCOPE BACKGROUND ============================= -->
+    <div class="stethoscope" id="stethoscope">
+      <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M200 40 C200 40 280 40 280 120 C280 160 250 170 230 160"
+          stroke="var(--teal)"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
+        <path
+          d="M200 40 C200 40 120 40 120 120 C120 160 150 170 170 160"
+          stroke="var(--teal)"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
+        <circle cx="280" cy="120" r="12" fill="var(--teal)" opacity="0.8" />
+        <circle cx="120" cy="120" r="12" fill="var(--teal)" opacity="0.8" />
+        <path
+          d="M230 160 Q200 200 170 160"
+          stroke="var(--teal)"
+          stroke-width="4"
+          stroke-linecap="round"
+          fill="none"
+        />
+        <path
+          d="M200 200 C200 200 200 280 200 300 C200 340 160 360 120 360"
+          stroke="var(--teal)"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
+        <circle
+          cx="120"
+          cy="360"
+          r="25"
+          fill="none"
+          stroke="var(--coral)"
+          stroke-width="4"
+        />
+        <circle cx="120" cy="360" r="15" fill="var(--coral)" opacity="0.3" />
+      </svg>
+    </div>
+    <!-- ============================= NAV ============================= -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <header id="site-nav">
+      <div class="nav-inner">
+        <a href="#hero" class="logo"
+          ><span class="k">Kaleab</span><span class="dot-accent">.</span></a
+        >
+
+        <nav class="nav-links" id="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle light and dark theme"
+            title="Toggle theme"
+          >
+            <svg
+              class="sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            >
+              <circle cx="12" cy="12" r="4.5" />
+              <path
+                d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8l1.8-1.8M18 6l1.8-1.8"
+              />
+            </svg>
+            <svg
+              class="moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z" />
+            </svg>
+          </button>
+          <a href="#contact" class="nav-cta">Let's talk</a>
+          <button class="nav-burger" id="nav-burger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ========================== HERO ========================= -->
+      <section id="hero">
+        <div class="hero-blob one"></div>
+        <div class="hero-blob two"></div>
+        <div class="wrap hero-grid">
+          <div>
+            <p class="hero-kicker">
+              <span class="flag">🇪🇹</span> Hawassa, Ethiopia
+            </p>
+
+            <h1 class="hero-headline">
+              I used to diagnose<br />
+              <span class="strike">patients.</span>
+              <br />
+              Now I diagnose <span class="accent">code.</span>
+            </h1>
+
+            <div class="hero-titles">
+              <span class="title-chip">
+                <img
+                  width="20px"
+                  src="resources/backend-development-48.apng.png"
+                  alt=""
+                />
+              </span>
+
+              <span class="title-chip second">
+                <img
+                  width="20px"
+                  src="resources/stethoscope-50.apng.png"
+                  alt=""
+                />
+              </span>
+
+              <span class="title-chip doc" id="typing-chip"></span>
+            </div>
+
+            <p class="hero-pitch">
+              I'm Kaleab — a doctor by training and a developer by obsession. I
+              build fullstack and AI-powered products with the same instinct I
+              was taught in medicine.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">See my work ↓</a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <b>2</b><span>CAREERS </span> <b>1</b> <span>BRAIN</span>
+              </div>
+              <div class="hero-stat">
+                <b>ET → 🌍</b><span>OPEN TO REMOTE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <!-- rotating dashed ring: the "orbit" the two careers share -->
+            <svg class="orbit-ring" viewBox="0 0 440 440" aria-hidden="true">
+              <circle cx="220" cy="220" r="208" />
+            </svg>
+
+            <!-- orbiting career badges -->
+            <span class="orbit-badge badge-stetho" aria-hidden="true">🩺</span>
+            <span class="orbit-badge badge-code" aria-hidden="true">{ }</span>
+
+            <div class="hero-portrait">
+              <span class="corner-tag">🩺 MD → Dev</span>
+              <span class="scan-line" aria-hidden="true"></span>
+              <img
+                src="./resources/Image_4.png"
+                alt="Portrait of Kaleab Abate Kebede"
+                loading="eager"
+                onerror="
+                  this.style.display = 'none';
+                  this.closest('.hero-portrait').classList.add('img-fallback');
+                "
+              />
+              <span class="initials" aria-hidden="true">KK</span>
+            </div>
+
+            <div class="badge-pill">
+              <span class="pulse"></span> Open to fullstack &amp; AI roles
+            </div>
+          </div>
+        </div>
+
+        <!-- signature motif: heartbeat trace doubling as a code waveform -->
+        <svg
+          class="vitals-hero"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M0,70 L150,70 L180,30 L210,100 L240,70 L320,70 L350,50 L380,90 L410,70 L1200,70"
+          />
+        </svg>
+      </section>
+
+      <!-- ============================= PROJECTS ============================= -->
+      <section id="projects">
+        <div class="wrap">
+          <div class="section-header reveal">
+            <span class="eyebrow"><span class="dot"></span> SELECTED WORK</span>
+            <h2 class="section-heading">
+              Projects I've <em>actually shipped</em>
+            </h2>
+            <p class="section-sub">
+              A few things I've built while learning the basics and advanced AI
+              powered fullstack application development.
+            </p>
+          </div>
+
+          <div class="projects-grid reveal-stagger">
+            <article class="project-card">
+              <div class="project-thumb">
+                <span class="icon">🖼️</span> Drop a screenshot here
+              </div>
+              <span class="project-tag">PROJECT 01</span>
+              <h3 class="project-title">Project Name One</h3>
+              <p class="project-desc">
+                One or two sentences on the real problem this solved and why you
+                built it this way — that context matters more to hiring managers
+                than the feature list.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Node.js</span>
+                <span class="stack-pill">MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="#">Live demo ↗</a>
+                <a href="#">Source code →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-thumb">
+                <span class="icon">🖼️</span> Drop a screenshot here
+              </div>
+              <span class="project-tag">PROJECT 02</span>
+              <h3 class="project-title">Project Name Two</h3>
+              <p class="project-desc">
+                Same idea — what was broken, what you built, and the one
+                decision you'd defend in an interview. Specific beats
+                impressive.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">Python</span>
+                <span class="stack-pill">OpenAI API</span>
+                <span class="stack-pill">PostgreSQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#">Live demo ↗</a>
+                <a href="#">Source code →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-thumb">
+                <span class="icon">🖼️</span> Drop a screenshot here
+              </div>
+              <span class="project-tag">PROJECT 03</span>
+              <h3 class="project-title">Project Name Three</h3>
+              <p class="project-desc">
+                Maybe this is the health-tech one — where the doctor and the
+                developer in you actually worked on the same problem together.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Express</span>
+                <span class="stack-pill">Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a href="#">Live demo ↗</a>
+                <a href="#">Source code →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-thumb">
+                <span class="icon">🏥</span> Drop a screenshot here
+              </div>
+              <span class="project-tag">PROJECT 03 · HEALTH-TECH</span>
+              <h3 class="project-title">Project Name Three</h3>
+              <p class="project-desc">
+                The one where the doctor and the developer actually worked on
+                the same problem — replace with the clinical tool, triage
+                helper, or patient-facing app you're proudest of.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Express</span>
+                <span class="stack-pill">Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a href="#">Live demo ↗</a>
+                <a href="#">Source code →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-thumb">
+                <span class="icon">🤖</span> Drop a screenshot here
+              </div>
+              <span class="project-tag">PROJECT 04 · AI</span>
+              <h3 class="project-title">Project Name Four</h3>
+              <p class="project-desc">
+                Swap in the AI-powered build — what it automates, what model or
+                pipeline sits behind it, and the outcome that mattered.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">Python</span>
+                <span class="stack-pill">FastAPI</span>
+                <span class="stack-pill">OpenAI API</span>
+              </div>
+              <div class="project-links">
+                <a href="#">Live demo ↗</a>
+                <a href="#">Source code →</a>
+              </div>
+            </article>
+          </div>
+          <p class="projects-note">
+            More on
+            <a
+              href="https://github.com/kaleababatekebede"
+              target="_blank"
+              rel="noopener"
+              >GitHub ↗</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <svg
+        class="vitals-divider wrap"
+        viewBox="0 0 1200 46"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M0,23 L500,23 L520,8 L540,38 L560,23 L680,23 L700,13 L720,33 L740,23 L1200,23"
+        />
+      </svg>
+
+      <!-- ============================= ABOUT ============================= -->
+      <section id="about">
+        <div class="wrap about-grid">
+          <div class="about-card reveal">
+            <h3>Kaleab Abate Kebede</h3>
+            <p class="role">
+              Fullstack Developer · AI Developer · Medical Doctor
+            </p>
+
+            <div class="about-fact">
+              <span>Based in</span><span>Ethiopia</span>
+            </div>
+            <div class="about-fact">
+              <span>Background</span><span>Medicine → Code</span>
+            </div>
+            <div class="about-fact">
+              <span>Focus</span><span>Fullstack & AI</span>
+            </div>
+            <div class="about-fact">
+              <span>Status</span><span>Open to roles</span>
+            </div>
+
+            <a
+              href="https://www.linkedin.com/in/kaleab-abate/"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary linkedin-btn"
+            >
+              View LinkedIn profile ↗
+            </a>
+          </div>
+
+          <div>
+            <span class="eyebrow reveal"
+              ><span class="dot"></span> HOW I GOT HERE</span
+            >
+            <h2 class="section-heading reveal">About <em>me</em></h2>
+
+            <div class="about-body reveal">
+              <p>
+                I trained as a medical doctor first. Years of clinical work
+                taught me how to take a messy set of symptoms, ask the right
+                questions, and work backward to what's actually wrong.
+              </p>
+              <p>
+                A habit that turned out to translate almost perfectly to
+                debugging software. Somewhere along the way, building the tools
+                I wished I'd had in the clinic became the thing I couldn't stop
+                doing after hours, and eventually it became the main thing.
+              </p>
+
+              <p>
+                These days I split my attention between fullstack development
+                and AI — building products end to end, from database schema to
+                the interface someone actually touches, and increasingly wiring
+                AI into that experience in ways that are useful rather than
+                gimmicky.
+              </p>
+            </div>
+
+            <div class="philosophy-list reveal-stagger">
+              <div class="philosophy-item">
+                <span class="num">01</span>
+                <div>
+                  <h4>Diagnose before you treat</h4>
+                  <p>
+                    Understand the actual bug or need before writing a fix.
+                    <br />
+                    Symptom-chasing creates more bugs than it solves.
+                  </p>
+                </div>
+              </div>
+              <div class="philosophy-item">
+                <span class="num">02</span>
+                <div>
+                  <h4>Bedside manner, applied to users</h4>
+                  <p>
+                    Software should explain itself calmly, <br />
+                    especially when something's gone wrong. <br />No jargon, no
+                    blame.
+                  </p>
+                </div>
+              </div>
+              <div class="philosophy-item">
+                <span class="num">03</span>
+                <div>
+                  <h4>Test it like a life depends on it</h4>
+                  <p>
+                    Old habit from medicine. <br />It rarely does but building
+                    like it does catches the bugs that matter.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= SKILLS ============================= -->
+      <section id="skills">
+        <div class="wrap">
+          <div
+            class="section-header reveal"
+            style="margin: 0 auto 48px; text-align: center"
+          >
+            <span class="eyebrow"><span class="dot"></span> TOOLBOX</span>
+            <h2 class="section-heading">Tech I reach for <em>most</em></h2>
+            <p class="section-sub" style="margin: 0 auto">
+              A floating shelf of what I build with day to day.
+            </p>
+          </div>
+        </div>
+
+        <div class="skills-marquee-container">
+          <div class="skills-marquee" id="skills-marquee"></div>
+        </div>
+      </section>
+
+      <!-- ============================= RESUME ============================= -->
+      <section id="resume">
+        <div class="wrap">
+          <div class="resume-card reveal">
+            <div class="resume-copy">
+              <span class="eyebrow"><span class="dot"></span> Resume</span>
+              <h2>Want the full paper trail?</h2>
+              <p>
+                My résumé covers both sides of the career — clinical background
+                and development work.
+              </p>
+            </div>
+            <div class="resume-actions">
+              <a
+                href="resume/Developer CV.pdf"
+                download
+                class="btn btn-primary"
+                id="resume-btn"
+              >
+                ⬇ Download résumé (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= CONTACT ============================= -->
+      <section id="contact">
+        <div class="wrap">
+          <div class="section-header reveal">
+            <span class="eyebrow"><span class="dot"></span> LET'S TALK</span>
+            <h2 class="section-heading">
+              Got a role, a project,<br />or just a question?
+            </h2>
+            <p class="section-sub">
+              I reply to real messages quickly — no recruiters-only rule, no
+              gatekeeping. Reach out however's easiest for you.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="reveal">
+              <div class="contact-links reveal-stagger">
+                <a
+                  class="contact-link-item"
+                  href="mailto:kaleababatekebede@gmail.com"
+                >
+                  <span class="ic"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                    >
+                      <path
+                        d="M3 7l9 6 9-6M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1z"
+                      /></svg
+                  ></span>
+                  <div>
+                    <div class="lbl">EMAIL</div>
+                    <div class="val">kaleababatekebede@gmail.com</div>
+                  </div>
+                </a>
+                <a class="contact-link-item" href="tel:+251912045312">
+                  <span class="ic"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                    >
+                      <path
+                        d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                      /></svg
+                  ></span>
+                  <div>
+                    <div class="lbl">WHATSAPP</div>
+                    <div class="val">+251 91 204 5312</div>
+                  </div>
+                </a>
+                <a
+                  class="contact-link-item"
+                  href="https://www.linkedin.com/in/kaleab-abate/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="ic"
+                    ><svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                      /></svg
+                  ></span>
+                  <div>
+                    <div class="lbl">LINKEDIN</div>
+                    <div class="val">linkedin.com/in/kaleab-abate</div>
+                  </div>
+                </a>
+                <a
+                  class="contact-link-item"
+                  href="https://github.com/kaleababatekebede"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="ic"
+                    ><svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+                      /></svg
+                  ></span>
+                  <div>
+                    <div class="lbl">GITHUB</div>
+                    <div class="val">github.com/kaleababatekebede</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <form class="contact-form" id="contact-form">
+                <div class="form-row">
+                  <label for="cf-name">Your name</label>
+                  <input
+                    type="text"
+                    id="cf-name"
+                    name="name"
+                    placeholder="Jane Doe"
+                    required
+                  />
+                </div>
+                <div class="form-row">
+                  <label for="cf-email">Your email</label>
+                  <input
+                    type="email"
+                    id="cf-email"
+                    name="email"
+                    placeholder="you@company.com"
+                    required
+                  />
+                </div>
+                <div class="form-row">
+                  <label for="cf-message">Message</label>
+                  <textarea
+                    id="cf-message"
+                    name="message"
+                    rows="5"
+                    placeholder="What are you building, or what would you like to ask?"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  style="width: 100%; justify-content: center"
+                >
+                  Send message →
+                </button>
+                <p class="form-success" id="form-success">
+                  ✓ Your email app should be opening now — thanks for reaching
+                  out!
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Designed &amp; built by <strong>Kaleab Abate Kebede</strong> <br />
+        Hawassa, Ethiopia
+      </p>
+      <a href="#hero" class="back-to-top">↑ Back to top</a> <br>
+     
+    </footer>
+
+    <div id="toast"></div>
+
+    <button
+      class="scroll-fab"
+      id="scroll-fab"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      ↑
+    </button>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
