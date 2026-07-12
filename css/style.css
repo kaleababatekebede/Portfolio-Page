@@ -674,7 +674,8 @@ html[data-theme="dark"] .hero-headline .accent {
   color: var(--coral-dark);
 }
 .second {
-  background-color: var(--surface);
+  background-color: rgba(255, 255, 255, 0.167) !important;
+  color: var(--coral-dark);
 }
 html[data-theme="dark"] .title-chip.doc {
   color: var(--coral);
@@ -1224,6 +1225,7 @@ html[data-theme="dark"] .stack-pill {
 .project-links a:hover {
   color: var(--teal-dark);
   gap: 8px;
+  font-weight: 900;
 }
 html[data-theme="dark"] .project-links a:hover {
   color: var(--teal);
@@ -1231,10 +1233,15 @@ html[data-theme="dark"] .project-links a:hover {
 
 .projects-note {
   margin-top: 30px;
-  font-size: 13.5px;
+  font-size: 15px;
   color: var(--muted);
   font-family: var(--font-mono);
   text-align: center;
+}
+
+.linkNote:hover {
+  font-weight: 900;
+  color: var(--teal-dark);
 }
 
 /* ---------------------------------- About ---------------------------------- */
@@ -1804,7 +1811,6 @@ footer .heart {
 html[data-theme="dark"] .back-to-top:hover {
   color: var(--teal);
 }
-
 
 /* ------------------------------- Stethoscope Background ---------------------------- */
 .stethoscope {
